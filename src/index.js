@@ -2,7 +2,7 @@ import React from 'react';
 // Ne fonctionne pas avec react version 17
 // import ReactDOM from 'react-dom/client';
 import ReactDOM from 'react-dom';
-import './index.css';
+
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 

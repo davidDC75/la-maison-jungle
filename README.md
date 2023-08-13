@@ -1,3 +1,6 @@
+# Comment créer un nouveau projet react
+
+yarn create react-app la-maison-jungle
 # urls openclassrooms
 
 - github : https://github.com/OpenClassrooms-Student-Center/7008001-Debutez-avec-React

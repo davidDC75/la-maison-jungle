@@ -1,12 +1,10 @@
-import Header from './Header';
-import Description from './Description';
-import Cart from './Cart';
+import '../styles/Banner.css';
 
 function Banner() {
+    const title = "La maison Jungle";
     return (
-        <div>
-            <Header />
-            <Description />
+        <div className="lmj-banner">
+            <h1>{ title.toUpperCase() }</h1>
         </div>
     );
 }
