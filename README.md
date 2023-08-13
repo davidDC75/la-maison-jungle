@@ -1,3 +1,7 @@
+# urls openclassrooms
+
+- github : https://github.com/OpenClassrooms-Student-Center/7008001-Debutez-avec-React
+- partie 2 tuto : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7135204-prenez-en-main-create-react-app
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
