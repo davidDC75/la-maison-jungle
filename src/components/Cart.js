@@ -2,14 +2,17 @@ import '../styles/Cart.css';
 
 let plantList = [
     {
+        "id": 1,
         "name": "Monstera",
         "price": 8
     },
     {
+        "id": 2,
         "name": "Lierre",
         "price": 10
     },
     {
+        "id": 3,
         "name": "Bouquet de fleur",
         "price": 15
     }
@@ -21,9 +24,9 @@ function Cart() {
     return(
         <div className='lmj-cart'>
             <ul>
-                <li>{ plantList[0].name } - { plantList[0].price } €</li>
-                <li>{ plantList[1].name } - { plantList[1].price } €</li>
-                <li>{ plantList[2].name } - { plantList[2].price } €</li>
+                {plantList.map( (plant, index) => (
+                    <li key={plant.id}>{plant.name} - {plant.price} €</li>
+                ))}
             </ul>
             <div>
                 TOTAL : { totalPrice }
