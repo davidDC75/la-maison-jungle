@@ -1,3 +1,5 @@
+// On peut passer les paramètres aussi de cette manière
+// function CareScale({scaleValue, careType}) {
 function CareScale(props) {
     // const scaleValue = props.scaleValue;
     const {scaleValue, careType} = props;
