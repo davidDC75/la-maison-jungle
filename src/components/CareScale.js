@@ -1,3 +1,6 @@
+import Sun from '../assets/sun.svg';
+import Water from '../assets/water.svg';
+
 // On peut passer les paramètres aussi de cette manière
 // function CareScale({scaleValue, careType}) {
 function CareScale(props) {
@@ -5,7 +8,13 @@ function CareScale(props) {
     const {scaleValue, careType} = props;
 
     const range = [1, 2, 3];
-    const scaleType = careType === 'light' ? '☀️' : '💧';
+
+    const scaleType =
+            careType === 'light' ? (
+                <img src={Sun} alt='sun-icon' />
+            ) : (
+                <img src={Water} alt='water-icon' />
+            );
 
     return (<div>
                 {range.map((rangeElem) =>
