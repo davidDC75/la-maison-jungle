@@ -10,6 +10,10 @@ function Cart({ cart, updateCart }) {
         0
     );
 
+    function deleteFromCart(name) {
+        updateCart( cart.filter( (plant) => plant.name!==name));
+    }
+
     return isOpen ?(
         <div className='lmj-cart'>
             <button className='lmj-cart-toggle-button' onClick={() => setIsOpen(false)}>Fermer le panier</button>
@@ -17,8 +21,10 @@ function Cart({ cart, updateCart }) {
                 {cart.map( ({ name, price, amount }, index) => (
                     <div key={`${name}-${index}`}>
                         {name} {price}€ x {amount}
+                        <button onClick={ () => deleteFromCart(name) }>Supprimer</button>
                     </div>
                 ))}
+
             <h3>Total : { total }€</h3>
             <button onClick={() => updateCart([])}>Vider le panier</button>
         </div>
