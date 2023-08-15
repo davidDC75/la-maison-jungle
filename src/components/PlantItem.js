@@ -1,7 +1,7 @@
 import CareScale from "./CareScale";
 import '../styles/PlantItem.css';
 
-function PlantItem({ id, isSpecialOffer, cover, name, water, light}) {
+function PlantItem({ id, isSpecialOffer, cover, name, water, light, price}) {
 
     const isSpecialOfferDiv = isSpecialOffer === true ? (
         <div className="lmj-sales">Promo</div>
@@ -11,7 +11,7 @@ function PlantItem({ id, isSpecialOffer, cover, name, water, light}) {
         <li key={id} className="lmj-plant-item">
             <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} />
             {isSpecialOfferDiv}
-            {name}
+            {name} - {price}€
             <div>
                 <CareScale careType='water' scaleValue={water} />
                 <CareScale careType='light' scaleValue={light} />
