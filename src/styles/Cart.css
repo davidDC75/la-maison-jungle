@@ -32,3 +32,7 @@
 .lmj-cart-closed > button {
 	color: black;
 }
+
+.lmj-cursor-pointer {
+	cursor: pointer;
+}
