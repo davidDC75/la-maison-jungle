@@ -1,10 +1,6 @@
 import CareScale from "./CareScale";
 import '../styles/PlantItem.css';
 
-function handleClick(plantName) {
-    console.log(`Vous voulez acheter 1 ${plantName}`);
-}
-
 function PlantItem({ id, isSpecialOffer, cover, name, water, light}) {
 
     const isSpecialOfferDiv = isSpecialOffer === true ? (
@@ -12,7 +8,7 @@ function PlantItem({ id, isSpecialOffer, cover, name, water, light}) {
     ) : null;
 
     return (
-        <li key={id} className="lmj-plant-item" onClick={ () => handleClick(name)}>
+        <li key={id} className="lmj-plant-item">
             <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} />
             {isSpecialOfferDiv}
             {name}
