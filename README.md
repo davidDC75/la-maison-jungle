@@ -5,7 +5,8 @@ yarn create react-app la-maison-jungle
 
 - github : https://github.com/OpenClassrooms-Student-Center/7008001-Debutez-avec-React
 - partie 2 tuto : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7135204-prenez-en-main-create-react-app
-- J'en suis là : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7135822-reutilisez-vos-composants-avec-les-props
+- A revoir : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7135822-reutilisez-vos-composants-avec-les-props
+- J'en suis là : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7137536-mettez-en-place-votre-state-local-avec-usestate
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
