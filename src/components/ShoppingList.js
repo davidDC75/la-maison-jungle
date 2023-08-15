@@ -1,11 +1,17 @@
+import { useState } from "react";
+
 import { plantList } from "../datas/plantList";
 import '../styles/ShoppingList.css';
 import PlantItem from "./PlantItem";
+import Categories from "./Categories";
+import { act } from "react-dom/test-utils";
 
 function ShoppingList({ cart, updateCart }) {
 
+    const [activeCategory, setActiveCategory] = useState('');
+
     const categories = plantList.reduce(
-        (acc,plant) =>
+        (acc, plant) =>
             acc.includes(plant.category) ? acc : acc.concat(plant.category),
             []
     );
@@ -27,25 +33,27 @@ function ShoppingList({ cart, updateCart }) {
 
     return (
         <div className="lmj-shopping-list">
-            <ul>
-                {categories.map( (cat) => (
-                    <li key={cat}>{cat}</li>
-                ))}
-            </ul>
+            <Categories
+                categories={categories}
+                setActiveCategory={setActiveCategory}
+                activeCategory={activeCategory}
+                />
             <ul className="lmj-plant-list">
-                {plantList.map( ({id, isSpecialOffer, cover, name, water, light, price}) => (
-                    <div key={id}>
-                        <PlantItem
-                            id={id}
-                            isSpecialOffer={isSpecialOffer}
-                            cover={cover}
-                            name={name}
-                            water={water}
-                            light={light}
-                            price={price}
-                        />
-                        <button onClick={() => addToCart(name, price)}>Ajouter</button>
-                    </div>
+                {plantList.map( ({id, isSpecialOffer, cover, name, water, light, price, category}) => (
+                    !activeCategory || activeCategory == category ? (
+                        <div key={id}>
+                            <PlantItem
+                                id={id}
+                                isSpecialOffer={isSpecialOffer}
+                                cover={cover}
+                                name={name}
+                                water={water}
+                                light={light}
+                                price={price}
+                            />
+                            <button onClick={() => addToCart(name, price)}>Ajouter</button>
+                        </div>
+                    ) : null
                 ))}
             </ul>
         </div>
