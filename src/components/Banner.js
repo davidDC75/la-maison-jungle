@@ -1,8 +1,8 @@
 function Banner({ children }) {
     return (
-        <div className="lmj-banner">
+        <header className="lmj-banner">
             {children}
-        </div>
+        </header>
     );
 }
 
