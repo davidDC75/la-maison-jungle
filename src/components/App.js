@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import Cart from './Cart';
 import ShoppingList from './ShoppingList';
+import Footer from './Footer';
 
 import '../styles/Banner.css';
 import logo from '../assets/logo.png';
@@ -17,6 +18,7 @@ function App() {
     </Banner>
     <Cart />
     <ShoppingList />
+    <Footer />
     </React.Fragment>
   );
 }
