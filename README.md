@@ -6,7 +6,7 @@ yarn create react-app la-maison-jungle
 - lien openclassrooms du tutoriel : https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-complete
 - github : https://github.com/OpenClassrooms-Student-Center/7008001-Debutez-avec-React
 
-- J'en suis là : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7137079-declenchez-des-effets-avec-useeffect
+- J'en suis là : https://openclassrooms.com/fr/courses/7008001-debutez-avec-react/7137137-revenez-sur-vos-acquis
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
