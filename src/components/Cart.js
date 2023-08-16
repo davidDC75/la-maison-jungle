@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import '../styles/Cart.css';
 
@@ -33,6 +33,11 @@ function Cart({ cart, updateCart }) {
             ])
         }
     }
+
+    // Changement du titre de la page quand le total est mis à jour
+    useEffect( () => {
+        document.title = `LMJ : ${total}€ d'achats`;
+    }, [total]);
 
     return isOpen ?(
         <div className='lmj-cart'>

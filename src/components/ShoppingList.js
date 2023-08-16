@@ -4,7 +4,7 @@ import { plantList } from "../datas/plantList";
 import '../styles/ShoppingList.css';
 import PlantItem from "./PlantItem";
 import Categories from "./Categories";
-import { act } from "react-dom/test-utils";
+
 
 function ShoppingList({ cart, updateCart }) {
 
@@ -40,7 +40,7 @@ function ShoppingList({ cart, updateCart }) {
                 />
             <ul className="lmj-plant-list">
                 {plantList.map( ({id, isSpecialOffer, cover, name, water, light, price, category}) => (
-                    !activeCategory || activeCategory == category ? (
+                    !activeCategory || activeCategory === category ? (
                         <div key={id}>
                             <PlantItem
                                 id={id}
