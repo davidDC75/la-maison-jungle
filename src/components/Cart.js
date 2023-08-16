@@ -22,10 +22,10 @@ function Cart({ cart, updateCart }) {
         ])
     }
 
-    function delOneToCart(name,price) {
+    function deleteOneFromCart(name,price) {
         const currentNameToAdd = cart.filter( (plant) => plant.name===name );
         const cartWithoutName = cart.filter( (plant) => plant.name!==name );
-        if (currentNameToAdd[0].amount===0) {
+        if (currentNameToAdd[0].amount===1) {
             deleteFromCart(name);
         } else {
             updateCart([
@@ -48,7 +48,7 @@ function Cart({ cart, updateCart }) {
                         {name} {price}€ x {amount}
                         <a href="#" className='lmj-cursor-pointer' onClick={ () => deleteFromCart(name) }>❌</a>
                         <a href="#" className='lmj-cursor-pointer' onClick={ () => addOneToCart(name, price)}>🔼</a>
-                        <a href="#" className='lmj-cursor-pointer' onClick={ () => delOneToCart(name, price)}>🔽</a>
+                        <a href="#" className='lmj-cursor-pointer' onClick={ () => deleteOneFromCart(name, price)}>🔽</a>
                     </div>
                 ))}
 
